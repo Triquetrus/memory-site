@@ -483,10 +483,24 @@ body{
     max-height: 60vh;
   }
 
-  /* remove weird positioning issues */
+ /* ===== MOBILE SIDE PANELS FIX ===== */
+@media (max-width: 768px) {
+
   .sp-left, .sp-right {
-    display: none; /* hide side text on mobile */
+    display: block !important;
+    position: static !important;   /* 🔥 remove absolute positioning */
+    width: 100% !important;
+    margin: 10px 0;
+    text-align: center;
   }
+
+  .np-txt {
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 10px;
+  }
+
+}
 
   /* fix decorations overflow */
   svg {
