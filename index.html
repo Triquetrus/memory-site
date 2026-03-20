@@ -483,21 +483,29 @@ body{
     max-height: 60vh;
   }
 
- /* ===== MOBILE SIDE PANELS FIX ===== */
+
+/* ===== MOBILE SIDE PANEL FIX (KEEP POSITION) ===== */
 @media (max-width: 768px) {
 
-  .sp-left, .sp-right {
-    display: block !important;
-    position: static !important;   /* 🔥 remove absolute positioning */
-    width: 100% !important;
-    margin: 10px 0;
-    text-align: center;
+  .sp-left {
+    left: 5px !important;
+    top: 10% !important;
+    width: 90px !important;
+    transform: scale(0.75);
+    transform-origin: left top;
+  }
+
+  .sp-right {
+    right: 5px !important;
+    top: 10% !important;
+    width: 90px !important;
+    transform: scale(0.75);
+    transform-origin: right top;
   }
 
   .np-txt {
-    font-size: 13px;
-    line-height: 1.6;
-    padding: 10px;
+    font-size: 10px !important;
+    line-height: 1.4;
   }
 
 }
